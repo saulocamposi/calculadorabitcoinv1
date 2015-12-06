@@ -9,7 +9,7 @@
 .block{
   display: block-inline;
   float: left;
-  margin: 10px;
+  margin: 5px;
 }
 
 .textcalc{
@@ -17,7 +17,7 @@
 }
 
 .inputcalc{
-  width: 20%;
+  width: 10%;
   height: 40px;
 }
 </style>
@@ -50,26 +50,33 @@
         <td>
           {{value.sell}}
         </td>
-
       </tr>
     </table>
   </div>
 
-
   <div class="block">
-    <label class="textcalc">Valor BRL : </label>
-    <input class="inputcalc" type="text" name="name" value="" ng-model="brl">
-    <label class="textcalc">Valor Bitcoin : </label>
-    <input class="inputcalc" type="text" name="name" value="" ng-model="bitcoin">
+
+    <div class="">
+      <label class="textcalc">Valor Referência BRL : {{btctoyou}}</label>
+      <input class="inputcalc" type="number" name="brlrefname" value="" ng-model="brlref" ng-required="number">
+    </div>
+
+    <div class="">
+      <label class="textcalc">Valor BRL : </label>
+      <input class="inputcalc" type="number" name="brlname" value="" ng-model="brl" ng-required="number">
+      <label class="textcalc">Valor Bitcoin : </label>
+      <input class="inputcalc" type="number" name="btcname" value="" ng-model="bitcoin" required="number">
+    </div>
+
+
 
   </div>
+
   {{brl}}
   {{bitcoin}}
-
-
-
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js" charset="utf-8"></script>
   <script src="value.js"></script>
+
 </body>
 
 </html>
