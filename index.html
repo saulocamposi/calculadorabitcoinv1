@@ -5,22 +5,23 @@
   <meta charset="utf-8">
   <title>Calculadora Bitcoin</title>
 
-<style>
-.block{
-  display: block-inline;
-  float: left;
-  margin: 5px;
-}
+  <style>
+    .block {
+      display: block-inline;
+      float: left;
+      margin: 2px;
+    }
 
-.textcalc{
-  font-size: 2em;;
-}
+    .textcalc {
+      font-size: 2em;
+      ;
+    }
 
-.inputcalc{
-  width: 10%;
-  height: 40px;
-}
-</style>
+    .inputcalc {
+      width: 10%;
+      height: 40px;
+    }
+  </style>
 
 </head>
 
@@ -54,26 +55,46 @@
     </table>
   </div>
 
-  <div class="block">
+  <div>
 
     <div class="">
-      <label class="textcalc">Valor Referência BRL : {{btctoyou}}</label>
-      <input class="inputcalc" type="number" name="brlrefname" value="" ng-model="brlref" ng-required="number">
+      <label class="textcalc">Preço do Bitcoin em BRL : {{btctoyou}}</label>
+      <input class="inputcalc" type="text" name="brlrefname" value="" ng-model="brlref" ng-required="number">
     </div>
 
     <div class="">
       <label class="textcalc">Valor BRL : </label>
-      <input class="inputcalc" type="number" name="brlname" value="" ng-model="brl" ng-required="number">
+      <input class="inputcalc" type="text" name="brlname" value="" ng-model="brl" ng-required="number">
       <label class="textcalc">Valor Bitcoin : </label>
-      <input class="inputcalc" type="number" name="btcname" value="" ng-model="bitcoin" required="number">
+      <input class="inputcalc" type="text" name="btcname" value="" ng-model="bitcoin" required="number">
     </div>
+  </div>
 
+
+  <div class="">
+    <table>
+      <tr>
+        <td>
+          <span> BRL : </span>
+        </td>
+        <td>
+          {{ brlref * bitcoin | number : 2}}
+        </td>
+
+      </tr>
+      <tr>
+        <td>
+          <span>Bitcoin :</span>
+        </td>
+        <td>
+          {{ brl / brlref | number : 8 }}
+        </td>
+      </tr>
+    </table>
 
 
   </div>
 
-  {{brl}}
-  {{bitcoin}}
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js" charset="utf-8"></script>
   <script src="value.js"></script>
 

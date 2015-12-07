@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+
+  </head>
+  <body>
+
+<input type="text" name="name" value="">
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<script type="text/javascript">
+$( "input" ).keydown(function(e){
+    var keyValue = String.fromCharCode(e.which);
+    if (!$.isNumeric(keyValue)){
+      if (e.which == 8 || e.which == 9){
+        console.log(e.which);
+      }else {
+        e.preventDefault();
+        return;
+      }
+    }
+  });
+</script>
+  </body>
+</html>
