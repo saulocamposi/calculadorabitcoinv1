@@ -1,0 +1,38 @@
+html {
+  font-family: sans-serif;
+}
+.block {
+  display: block-inline;
+  float: left;
+  margin: 2%;
+}
+.textcalc {
+  font-size: 2em;
+  ;
+}
+.inputcalc {
+  width: 10%;
+  height: 40px;
+}
+.priceRef {
+  margin: 2%;
+  padding: 1%;
+}
+.valueRef {
+  margin: 2%;
+  padding: 1%;
+}
+.labelPrice {
+  font-size: 2em;
+}
+.price {
+  font-size: 3em;
+  font-style: arial;
+}
+.footer {
+  clear: both;
+  padding: 0 15px;
+}
+.header {
+  margin: 2%;
+}
