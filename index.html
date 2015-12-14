@@ -4,8 +4,53 @@
 <head>
   <meta charset="utf-8">
   <title>Calculadora Bitcoin</title>
-    <link rel="icon" href="https://foxbit.exchange/assets/exchange_logos/foxbit_favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="main.css">
+
+  <style>
+    .block {
+      display: block-inline;
+      float: left;
+      margin: 2%;
+    }
+
+    .textcalc {
+      font-size: 2em;
+      ;
+    }
+
+    .inputcalc {
+      width: 10%;
+      height: 40px;
+    }
+
+    .priceRef {
+      margin: 2%;
+      padding: 1%;
+    }
+
+    .valueRef {
+      margin: 2%;
+      padding: 1%;
+    }
+
+    .labelPrice {
+      font-size: 2em;
+    }
+
+    .price {
+      font-size: 3em;
+      font-style: arial;
+    }
+
+    .footer {
+      clear: both;
+      padding: 0 15px;
+    }
+
+    .header {
+      margin: 2%;
+    }
+  </style>
+
 </head>
 
 <body ng-controller="mbCtrl">
@@ -18,61 +63,29 @@
 
     <div id="currencytable" class="block">
 
-      <h3>Exchanges Brasileiras</h3>
+      <h3>Tabela Referência Block Chain </h3>
 
       <table border="1">
-        <tr>
-          <th>
-            Logo
-          </th>
-          <th>
-            Volume
-          </th>
-          <th>
-            Maior Valor
-          </th>
-          <th>
-            Menor Valor
-          </th>
-        </tr>
-        <tr>
-          <td class="logofox">
-            <img data-switch-view="offerbook" src="http://www.foxbit.com.br/img/logo.svg" style="
-              height: 30px;
-              margin-top: -10px;
-              margin-bottom: -10px;">
-          </td>
-
+        <tr ng-repeat="(key,value) in blockchain">
           <td>
-            {{foxbit.vol}}
+            {{$index}}
           </td>
           <td>
-            {{foxbit.high}}
+            {{value.symbol}}
           </td>
           <td>
-            {{foxbit.low}}
+            {{key}}
+          </td>
+          <td>
+            {{value.last}}
+          </td>
+          <td>
+            {{value.buy}}
+          </td>
+          <td>
+            {{value.sell}}
           </td>
         </tr>
-        <tr>
-          <td class="logofox">
-            <img data-switch-view="offerbook" src="https://foxbit.exchange/assets/exchange_logos/foxbit_toolbar_logo.png" style="
-              height: 30px;
-              margin-top: -10px;
-              margin-bottom: -10px;">
-          </td>
-
-          <td>
-            {{btctoyou.ticker.vol}}
-          </td>
-          <td>
-            {{btctoyou.ticker.high}}
-          </td>
-          <td>
-            {{btctoyou.ticker.low}}
-          </td>
-        </tr>
-
-
       </table>
     </div>
 
@@ -121,9 +134,7 @@
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js" charset="utf-8"></script>
-  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="value.js"></script>
-  <script src="values_jquery.js"></script>
 
 </body>
 

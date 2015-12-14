@@ -1,28 +1,11 @@
 var app = angular.module('calcbtc', []);
 
-/*  app.config(['$httpProvider', function($httpProvider) {
-          $httpProvider.defaults.useXDomain = true;
-          delete $httpProvider.defaults.headers.common['X-Requested-With'];
-  }]);
-*/
 var mbCtrl = function($scope, $http, $resource) {
 
 /*
   $http.jsonp("https://www.bitcointoyou.com/api/ticker.aspx?callback=JSON_CALLBACK")
   .success(function(){alert("ok")});
 */
-
-
-$http.get("https://www.bitcointoyou.com/api/ticker.aspx")
-.then(
-  function(response) {
-    $scope.btctoyou = response.data;
-  },
-  function(json){
-  alert("erro"+json.data);
-  }
-);
-
 
 /*
   $http.jsonp("https://www.bitcointoyou.com/api/ticker.aspx?callback=saulera").success(function(data) {
