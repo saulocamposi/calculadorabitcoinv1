@@ -4,96 +4,46 @@
 <head>
   <meta charset="utf-8">
   <title>Calculadora Bitcoin</title>
-
-  <style>
-    .block {
-      display: block-inline;
-      float: left;
-      margin: 2%;
-    }
-
-    .textcalc {
-      font-size: 2em;
-      ;
-    }
-
-    .inputcalc {
-      width: 10%;
-      height: 40px;
-    }
-
-    .priceRef {
-      margin: 2%;
-      padding: 1%;
-    }
-
-    .valueRef {
-      margin: 2%;
-      padding: 1%;
-    }
-
-    .labelPrice {
-      font-size: 2em;
-    }
-
-    .price {
-      font-size: 3em;
-      font-style: arial;
-    }
-
-    .footer {
-      clear: both;
-      padding: 0 15px;
-    }
-
-    .header {
-      margin: 2%;
-    }
-  </style>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="main.css">
 
 </head>
 
 <body ng-controller="mbCtrl">
-
   <div id="pagewrap">
-
     <div class="header">
       <h1>Calculadora Bitcoin </h1>
     </div>
-
-    <div id="currencytable" class="block">
-
-      <h3>Tabela Referência Block Chain </h3>
-
-      <table border="1">
-        <tr ng-repeat="(key,value) in blockchain">
-          <td>
-            {{$index}}
-          </td>
-          <td>
-            {{value.symbol}}
-          </td>
-          <td>
-            {{key}}
-          </td>
-          <td>
-            {{value.last}}
-          </td>
-          <td>
-            {{value.buy}}
-          </td>
-          <td>
-            {{value.sell}}
-          </td>
-        </tr>
-      </table>
-    </div>
-
+      <div id="currencytable" class="block">
+        <h3>Tabela Referência Block Chain </h3>
+          <table border="1">
+            <tr ng-repeat="(key,value) in blockchain">
+              <td>
+                {{$index}}
+              </td>
+              <td>
+                {{value.symbol}}
+              </td>
+              <td>
+                {{key}}
+              </td>
+              <td>
+                {{value.last}}
+              </td>
+              <td>
+                {{value.buy}}
+              </td>
+              <td>
+                {{value.sell}}
+              </td>
+            </tr>
+          </table>
+      </div>
     <div>
 
       <div class="priceRef">
-        <label class="textcalc">Preço do Bitcoin em BRL : {{btctoyou}}</label>
-        <input class="inputcalc" type="text" name="brlrefname" value="" ng-model="brlref" ng-required="number">
+  <label class="textcalc">Preço do Bitcoin em BRL : {{btctoyou}}</label>  <input class="inputcalc" type="text" name="brlrefname" value="" ng-model="brlref" ng-required="number">
       </div>
 
       <div class="valueRef">
