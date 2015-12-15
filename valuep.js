@@ -22,9 +22,7 @@ var mbCtrl = function($scope, $http, $resource) {
    $scope.mbbit = response.data;
   });
 */
-  var currency = function(type) {
-    return angular.equals(type, "BRL");
-  }
+
 }
 
 app.controller("mbCtrl", ["$scope", "$http", mbCtrl]);

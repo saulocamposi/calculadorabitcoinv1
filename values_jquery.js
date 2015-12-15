@@ -6,14 +6,14 @@ $.ajax({
    type: 'GET',
     url: url,
     async: false,
-    jsonpCallback: 'callback',
+    jsonpCallback: 'ble',
     contentType: "application/json",
     dataType: 'jsonp',
     success: function(json) {
-       alert("estamo aqui ");
+      console.log(json)
     },
     error: function(e) {
-      alert("erro ");
+      console.log(e)
     }
 });
 
