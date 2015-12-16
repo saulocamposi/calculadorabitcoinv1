@@ -2,26 +2,25 @@ var app = angular.module('calcbtc', []);
 
 var mbCtrl = function($scope, $http, $resource) {
 
-/*
-  $http.jsonp("https://www.bitcointoyou.com/api/ticker.aspx?callback=JSON_CALLBACK")
-  .success(function(){alert("ok")});
-*/
-
-/*
-  $http.jsonp("https://www.bitcointoyou.com/api/ticker.aspx?callback=saulera").success(function(data) {
-    $scope.btctoyou(data);
+  $http.get("services.php?brand=btctoyou").then(function(response) {
+    $scope.btctoyou = response.data;
   });
-*/
+
+  $http.get("services.php?brand=mtc").then(function(response) {
+    $scope.mtc = response.data;
+  });
+
+  $http.get("services.php?brand=negociecoins").then(function(response) {
+    $scope.negociecoins = response.data;
+  });
+
+  $http.get("http://api.bitvalor.com/v1/ticker.json").then(function(response) {
+    $scope.bitvalor = response.data;
+  });
 
   $http.jsonp("https://api.blinktrade.com/api/v1/BRL/ticker?crypto_currency=BTC&callback=JSON_CALLBACK").then(function(response) {
     $scope.foxbit = response.data;
   });
-
-/*
-  $http.jsonp("https://mercadobitcoin.net/api/ticker?callback=JSON_CALLBACK").then(function(response){
-   $scope.mbbit = response.data;
-  });
-*/
 
 }
 
