@@ -14,13 +14,16 @@ var mbCtrl = function($scope, $http, $resource) {
     $scope.negociecoins = response.data;
   });
 
-  $http.get("http://api.bitvalor.com/v1/ticker.json").then(function(response) {
+  $http.get("bitvalor_services.php").then(function(response) {
     $scope.bitvalor = response.data;
   });
 
   $http.jsonp("https://api.blinktrade.com/api/v1/BRL/ticker?crypto_currency=BTC&callback=JSON_CALLBACK").then(function(response) {
     $scope.foxbit = response.data;
   });
+
+
+
 
 }
 

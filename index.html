@@ -5,51 +5,177 @@
   <meta charset="utf-8">
   <title>Calculadora Bitcoin</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-   <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" type="text/css" href="main.css">
-
+  <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 
 <body ng-controller="mbCtrl">
+
   <div id="pagewrap">
+
     <div class="header">
       <h1>Calculadora Bitcoin </h1>
     </div>
-      <div id="currencytable" class="block">
-        <h3>Tabela Referência Block Chain </h3>
-          <table border="1">
-            <tr ng-repeat="(key,value) in blockchain">
-              <td>
-                {{$index}}
-              </td>
-              <td>
-                {{value.symbol}}
-              </td>
-              <td>
-                {{key}}
-              </td>
-              <td>
-                {{value.last}}
-              </td>
-              <td>
-                {{value.buy}}
-              </td>
-              <td>
-                {{value.sell}}
-              </td>
-            </tr>
-          </table>
-      </div>
-    <div>
 
+    <div id="currencytable" class="block">
+<h2>Exchanges Brasileiras</h2>
+
+      <h3>Dados API Exchanges</h3>
+
+      <table border="1">
+        <tr>
+          <th>
+            Empresas
+          </th>
+          <th>
+            Volume
+          </th>
+          <th>
+            Maior Valor
+          </th>
+          <th>
+            Menor Valor
+          </th>
+        </tr>
+        <tr>
+          <td class="logofox">
+            Foxbit
+          </td>
+
+          <td>
+            {{foxbit.vol}}
+          </td>
+          <td>
+            {{foxbit.high}}
+          </td>
+          <td>
+            {{foxbit.low}}
+          </td>
+        </tr>
+        <tr>
+          <td class="logofox">
+            Bitcointoyou
+          </td>
+
+          <td>
+            {{btctoyou.ticker.vol}}
+          </td>
+          <td>
+            {{btctoyou.ticker.high}}
+          </td>
+          <td>
+            {{btctoyou.ticker.low}}
+          </td>
+        </tr>
+        <tr>
+          <td class="logofox">
+            Negociecoins
+          </td>
+
+          <td>
+            {{negociecoins.vol}}
+          </td>
+          <td>
+            {{negociecoins.high}}
+          </td>
+          <td>
+            {{negociecoins.low}}
+          </td>
+        </tr>
+      </table>
+
+
+      <h3>Dados BitValor</h3>
+
+      <table border="1">
+        <tr>
+          <th>
+            Empresas
+          </th>
+          <th>
+            Volume
+          </th>
+          <th>
+            Maior Valor
+          </th>
+          <th>
+            Menor Valor
+          </th>
+        </tr>
+        <tr>
+          <td class="logofox">
+            Foxbit
+          </td>
+
+          <td>
+            {{bitvalor.FOX.vol}}
+          </td>
+          <td>
+            {{bitvalor.FOX.high}}
+          </td>
+          <td>
+            {{bitvalor.FOX.low}}
+          </td>
+        </tr>
+        <tr>
+          <td class="logofox">
+            Bitcointoyou
+          </td>
+
+          <td>
+            {{bitvalor.B2U.vol}}
+          </td>
+          <td>
+            {{bitvalor.B2U.high}}
+          </td>
+          <td>
+            {{bitvalor.B2U.low}}
+          </td>
+        </tr>
+        <tr>
+          <td class="logofox">
+            Mercado Bitcoin
+          </td>
+
+          <td>
+            {{bitvalor.MBT.vol}}
+          </td>
+          <td>
+            {{bitvalor.MBT.high}}
+          </td>
+          <td>
+            {{bitvalor.MBT.low}}
+          </td>
+        </tr>
+        <tr>
+          <td class="logofox">
+            flowBTC
+          </td>
+
+          <td>
+            {{bitvalor.FLW.vol}}
+          </td>
+          <td>
+            {{bitvalor.FLW.high}}
+          </td>
+          <td>
+            {{bitvalor.FLW.low}}
+          </td>
+        </tr>
+
+
+      </table>
+    </div>
+
+    <div>
       <div class="priceRef">
-  <label class="textcalc">Preço do Bitcoin em BRL : {{btctoyou}}</label>  <input class="inputcalc" type="text" name="brlrefname" value="" ng-model="brlref" ng-required="number">
+        <label class="textcalc">Preço do Bitcoin em BRL : </label>
+        <input class="inputcalc" type="text" name="brlrefname" value="" ng-model="brlref" ng-required="number">
       </div>
 
       <div class="valueRef">
-        <label class="textcalc">Valor BRL : </label>
+        <label class="textcalc">Qtd BRL : </label>
         <input class="inputcalc" type="text" name="brlname" value="" ng-model="brl" ng-required="number">
-        <label class="textcalc">Valor Bitcoin : </label>
+        <label class="textcalc">Qtd Bitcoin : </label>
         <input class="inputcalc" type="text" name="btcname" value="" ng-model="bitcoin" required="number">
       </div>
     </div>
@@ -76,7 +202,7 @@
     </div>
 
     <div class="footer">
-      <p>Esta página é mantida por Saulo Campos sobre licensa <a href="http://www.gnu.org/licenses/gpl-3.0.en.html">GPL</a> </p>
+      <p>Esta página é mantida por Saulo Campos</p>
       <p>
         Repositório : <a href="https://github.com/saulocamposi/calculadorabitcoin">https://github.com/saulocamposi/calculadorabitcoin</a>
       </p>
@@ -84,8 +210,18 @@
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js" charset="utf-8"></script>
-  <script src="value.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="valuep.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+    ga('create', 'UA-71521810-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
 </body>
 
 </html>
