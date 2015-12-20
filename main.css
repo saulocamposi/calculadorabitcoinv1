@@ -5,6 +5,27 @@ html {
 .header {
 
 }
+
+.card{
+  border-radius: 3px;
+  background: #FFFFFF;
+  margin-top: 5%;
+}
+
+.title-card{
+  background: #673AB7;
+
+}
+
+.title-card span{
+  color: #FFFFFF;
+  font-size: 2em;
+  margin-top: 5%;
+  margin-left: 3%;
+}
+
+
+
 .block {
   display: block-inline;
   float: left;
