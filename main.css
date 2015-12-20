@@ -6,10 +6,17 @@ html {
 
 }
 
+.title-logo{
+font-size: 2em;
+margin-top: 2%;
+margin-left: 2%;
+}
+
 .card{
   border-radius: 3px;
   background: #FFFFFF;
-  margin-top: 5%;
+  margin-top: 1%;
+  margin-bottom: 3%;
 }
 
 .title-card{
@@ -24,14 +31,13 @@ html {
   margin-left: 3%;
 }
 
-
-
 .block {
   display: block-inline;
   float: left;
   margin-bottom: 1%;
   margin-left: 1%;
 }
+
 .mainCalculator {
   border-radius: 3px;
   background: #FFFFFF;
@@ -39,6 +45,7 @@ html {
   float: left;
   margin-left: 4%;
 }
+
 .mainresults {
   padding: 1%;
   margin-left:2%;
