@@ -1,38 +1,76 @@
 html {
   font-family: sans-serif;
+  background-color:#E5E5E1;
+}
+.header {
+
 }
 .block {
   display: block-inline;
   float: left;
-  margin: 2%;
+  margin-bottom: 1%;
+  margin-left: 1%;
+}
+.mainCalculator {
+  border-radius: 3px;
+  background: #FFFFFF;
+  width: 50%;
+  float: left;
+  margin-left: 4%;
+}
+.mainresults {
+  padding: 1%;
+  margin-left:2%;
+}
+
+.results {
+  border-radius: 3px;
+  width: 50%;
+  padding: 2%;
+  margin-top: 3%;
+  display: inline-block;
+  background-color: #CCCCCC;
+}
+
+.resultCalculator {
+  margin-top: 5%;
+  padding: 1%;
 }
 .textcalc {
   font-size: 2em;
-  ;
+}
+
+.inputCalculator {
+
+margin-bottom: 4%;
 }
 .inputcalc {
-  width: 10%;
-  height: 40px;
-}
-.priceRef {
-  margin: 2%;
+  border-radius: 3px;
+  margin-top: 3%;
+  margin-left: 3%;
   padding: 1%;
+  font-size:2em;
+  width: 80%;
+  border: 1px solid #c8c8c8;
+  box-shadow=inset 2px 2px 2px #f2f2f2;
+  outline: 0;
 }
-.valueRef {
-  margin: 2%;
-  padding: 1%;
-}
+
 .labelPrice {
   font-size: 2em;
 }
 .price {
-  font-size: 3em;
+  font-size: 2em;
   font-style: arial;
+}
+.priceRef {
+  display: block;
 }
 .footer {
   clear: both;
   padding: 0 15px;
 }
-.header {
-  margin: 2%;
+
+.exchanges{
+  width: 40%;
 }

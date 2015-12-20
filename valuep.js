@@ -22,6 +22,10 @@ var mbCtrl = function($scope, $http, $resource) {
     $scope.bitvalor = response.data;
   });
 
+  $http.get("promasters_services.php").then(function(response) {
+    $scope.promasters = response.data;
+  });
+
   /*
 
   API disabled per exceed limit of GETs
@@ -31,10 +35,6 @@ var mbCtrl = function($scope, $http, $resource) {
   });
 
   */
-
-
-
-
 
 }
 
