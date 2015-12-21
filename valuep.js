@@ -1,4 +1,19 @@
-var app = angular.module('calcbtc', []);
+var app = angular.module('calcbtc', ['ngRoute']);
+
+var routes = function($routeProvider){
+  $routeProvider
+         // route for the home page
+         .when('/', {
+             templateUrl : 'bitcoincalculator.html',
+             controller  : 'mbCtrl'
+         })
+         // route for the about page
+           .when('/satoshi', {
+               templateUrl : 'satoshicalculator.html',
+               controller  : 'mbCtrl'
+           })
+}
+
 
 var mbCtrl = function($scope, $http, $resource) {
 
@@ -38,4 +53,7 @@ var mbCtrl = function($scope, $http, $resource) {
 
 }
 
+
+
 app.controller("mbCtrl", ["$scope", "$http", mbCtrl]);
+app.config(routes);

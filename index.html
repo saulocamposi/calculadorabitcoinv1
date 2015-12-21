@@ -16,18 +16,14 @@
     <div class="header">
       <span class="title-logo">Calculadora Bitcoin</span>
     </div>
+
+
+
     <div class="block">
-
-
-
-
 <div class="card">
-
   <div class="title-card">
     <span>Exchanges Brasileiras</span>
   </div>
-
-
 
   <table class="pure-table pure-table-horizontal">
     <tr>
@@ -104,11 +100,7 @@
       </td>
     </tr>
   </table>
-
-
 </div>
-
-
 
       <div class="card">
         <div class="title-card">
@@ -226,30 +218,12 @@
       </div>
 
     </div>
-    <div class="mainCalculator">
 
 
-      <div class="mainresults">
-        <div class="results">
-          <span class="labelPrice"> BRL : </span>
-          <span class="price"> {{ brlref * bitcoin | number : 2}} </span>
-        </div>
 
-        <div class="results">
-          <span class="labelPrice">Bitcoin :</span>
-          <span class="price"> {{ brl / brlref | number : 8 }} </span>
-        </div>
-      </div>
+    <div ng-view></div>
 
 
-      <div class="inputCalculator">
-        <input class="inputcalc" type="text" name="brlrefname" value="" ng-model="brlref" ng-required="number" placeholder="Digite o preço do Bitcoin">
-        <input class="inputcalc" type="text" name="brlname" value="" ng-model="brl" ng-required="number" placeholder="Valor em Reais">
-        <input class="inputcalc" type="text" name="btcname" value="" ng-model="bitcoin" required="number" placeholder="Valor em Bitcoins">
-      </div>
-
-
-    </div>
 
     <div class="footer">
       <p>Esta página é mantida por Saulo Campos</p>
@@ -259,6 +233,7 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js" charset="utf-8"></script>
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="valuep.js"></script>
     <script>
