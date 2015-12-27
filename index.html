@@ -5,9 +5,9 @@
   <meta charset="utf-8">
   <title>Calculadora Bitcoin</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" type="text/css" href="main.css">
-  <link rel="stylesheet" type="text/css" href="main_calculator.css">
-  <link rel="stylesheet" type="text/css" href="card.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/main_calculator.css">
+  <link rel="stylesheet" type="text/css" href="css/card.css">
   <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
 </head>
 
@@ -20,15 +20,15 @@
     </div>
 
     <div class="card-index">
-        <ng-include src="'card-exchanges.html'"></ng-include>
-        <ng-include src="'card-bitvalor.html'"></ng-include>
-        <ng-include src="'card-cryptsy.html'"></ng-include>
+        <ng-include src="'tpl/card-exchanges.html'"></ng-include>
+        <ng-include src="'tpl/card-bitvalor.html'"></ng-include>
+        <ng-include src="'tpl/card-cryptsy.html'"></ng-include>
     </div>
 
     <div ng-view></div>
 
     <div class="footer">
-      <ng-include src="'footer.html'"></ng-include>
+      <ng-include src="'tpl/footer.html'"></ng-include>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js" charset="utf-8"></script>

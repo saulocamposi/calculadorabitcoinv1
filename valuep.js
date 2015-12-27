@@ -4,12 +4,12 @@ var routes = function($routeProvider){
   $routeProvider
          // route for the home page
          .when('/', {
-             templateUrl : 'bitcoincalculator.html',
+             templateUrl : 'tpl/bitcoincalculator.html',
              controller  : 'mbCtrl'
          })
          // route for the about page
            .when('/satoshi', {
-               templateUrl : 'satoshicalculator.html',
+               templateUrl : 'tpl/satoshicalculator.html',
                controller  : 'mbCtrl'
            })
 }
@@ -17,15 +17,15 @@ var routes = function($routeProvider){
 
 var mbCtrl = function($scope, $http, $resource) {
 
-  $http.get("services.php?brand=btctoyou").then(function(response) {
+  $http.get("services/services.php?brand=btctoyou").then(function(response) {
     $scope.btctoyou = response.data;
   });
 
-  $http.get("services.php?brand=flowbtc").then(function(response) {
+  $http.get("services/services.php?brand=flowbtc").then(function(response) {
     $scope.flowbtc = response.data;
   });
 
-  $http.get("services.php?brand=negociecoins").then(function(response) {
+  $http.get("services/services.php?brand=negociecoins").then(function(response) {
     $scope.negociecoins = response.data;
   });
 
@@ -33,7 +33,7 @@ var mbCtrl = function($scope, $http, $resource) {
     $scope.foxbit = response.data;
   });
 
-  $http.get("bitvalor_services.php").then(function(response) {
+  $http.get("services/bitvalor_services.php").then(function(response) {
     $scope.bitvalor = response.data;
   });
 
@@ -43,19 +43,19 @@ var mbCtrl = function($scope, $http, $resource) {
   });
 */
 
-  $http.get("doge_cryptsy_services.php").then(function(response) {
+  $http.get("services/doge_cryptsy_services.php").then(function(response) {
     $scope.doge = response.data;
   });
 
-  $http.get("dash_cryptsy_services.php").then(function(response) {
+  $http.get("services/dash_cryptsy_services.php").then(function(response) {
     $scope.dash = response.data;
   });
 
-  $http.get("lite_cryptsy_services.php").then(function(response) {
+  $http.get("services/lite_cryptsy_services.php").then(function(response) {
     $scope.lite = response.data;
   });
 
-  $http.get("ether_cryptsy_services.php").then(function(response) {
+  $http.get("services/ether_cryptsy_services.php").then(function(response) {
     $scope.ether = response.data;
   });
 
