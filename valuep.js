@@ -37,8 +37,26 @@ var mbCtrl = function($scope, $http, $resource) {
     $scope.bitvalor = response.data;
   });
 
+/*
   $http.get("promasters_services.php").then(function(response) {
     $scope.promasters = response.data;
+  });
+*/
+
+  $http.get("doge_cryptsy_services.php").then(function(response) {
+    $scope.doge = response.data;
+  });
+
+  $http.get("dash_cryptsy_services.php").then(function(response) {
+    $scope.dash = response.data;
+  });
+
+  $http.get("lite_cryptsy_services.php").then(function(response) {
+    $scope.lite = response.data;
+  });
+
+  $http.get("ether_cryptsy_services.php").then(function(response) {
+    $scope.ether = response.data;
   });
 
   /*
