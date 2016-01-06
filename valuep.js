@@ -1,4 +1,4 @@
-var app = angular.module('calcbtc', ['ngRoute']);
+var app = angular.module('calcbtc', ['ngMaterial','ngRoute']);
 
 var routes = function($routeProvider){
   $routeProvider
