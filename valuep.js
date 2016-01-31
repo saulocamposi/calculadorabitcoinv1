@@ -12,6 +12,11 @@ var routes = function($routeProvider){
                templateUrl : 'tpl/satoshicalculator.html',
                controller  : 'mbCtrl'
            })
+           // route for the about page
+             .when('/bit', {
+                 templateUrl : 'tpl/bitcalculator.html',
+                 controller  : 'mbCtrl'
+             })
 }
 
 
