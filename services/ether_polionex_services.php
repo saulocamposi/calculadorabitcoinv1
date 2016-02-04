@@ -1,12 +1,9 @@
 <?php
-   $cryptsy =  json_decode(file_get_contents("http://pubapi.cryptsy.com/api.php?method=singlemarketdata&marketid=504"));
 
-   $exchange = $cryptsy->return->markets->ETH;
+   $service =  json_decode(file_get_contents("https://poloniex.com/public?command=returnTicker"));
 
-  /* print "<pre>" ;
-   print_r($cryptsy) ;
-   print "<pre/>";
-   exit;*/
+   $exchange = $service->BTC_ETH;
+
 
    $volume = $exchange->volume;
    $label = $exchange->label;

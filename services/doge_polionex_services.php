@@ -1,14 +1,14 @@
 <?php
-   $cryptsy =  json_decode(file_get_contents("http://pubapi.cryptsy.com/api.php?method=singlemarketdata&marketid=132"));
 
-   $exchange = $cryptsy->return->markets->DOGE;
+  $service =  json_decode(file_get_contents("https://poloniex.com/public?command=returnTicker"));
 
-   $volume = $exchange->volume;
-   $label = $exchange->label;
-   $primary_name = $exchange->primaryname;
-   $last_trader = $exchange->lasttradetime;
-   $recenttrades = $exchange->recenttrades;
-   $price = $recenttrades[0]->price;
+  $exchange = $service->BTC_DOGE;
+
+   $volume = $exchange->baseVolume;
+   $currency = "DASH";
+   $label = "DASH";
+   $last_trader = $exchange->last;
+   $price = $last_trader;
 
    $ticker =
    array(

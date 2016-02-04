@@ -1,17 +1,24 @@
 <?php
-   $cryptsy =  json_decode(file_get_contents("http://pubapi.cryptsy.com/api.php?method=singlemarketdata&marketid=155"));
+include('../utils/array_utils.php');
 
-   $exchange = $cryptsy->return->markets->DRK;
+   $service =  json_decode(file_get_contents("https://poloniex.com/public?command=returnTicker"));
+
+ArrayUtils::showArray($service);
+
+
+   $exchange = $service->BTC_DASH;
 
      //include('array_utils.php');
      //ArrayUtils::showArray($cryptsy);
 
-   $volume = $exchange->volume;
-   $currency = $exchange->primaryname;
-   $label = $exchange->label;
-   $last_trader = $exchange->lasttradetime;
-   $recenttrades = $exchange->recenttrades;
-   $price = $recenttrades[0]->price;
+
+
+
+   $volume = $exchange->baseVolume;
+   $currency = "DASH";
+   $label = "DASH";
+   $last_trader = $exchange->last;
+   $price = $last_trader;
 
    $ticker =
    array(
