@@ -1,31 +1,25 @@
 <?php
+  $service =  json_decode(file_get_contents("https://poloniex.com/public?command=returnTicker"));
+
+  $exchange = $service->BTC_LTC;
 
 
-   $cryptsy =  json_decode(file_get_contents("http://pubapi.cryptsy.com/api.php?method=singlemarketdata&marketid=3"));
+  $volume = $exchange->baseVolume;
+  $currency = "LITE";
+  $label = "BTC";
+  $last_trader = $exchange->last;
+  $price = $last_trader;
 
-  //include('array_utils.php');
-  //ArrayUtils::showArray($cryptsy);
+  $ticker =
+  array(
+  "label" => $label ,
+  "currency" => $currency ,
+  "volume" => $volume ,
+  "lastrader" => $last_trader ,
+  "price" => $price);
 
-   $exchange = $cryptsy->return->markets->LTC;
+  $ticker = json_encode($ticker);
 
-   $volume = $exchange->volume;
-   $label = $exchange->label;
-   $primary_name = $exchange->primaryname;
-   $last_trader = $exchange->lasttradetime;
-   $recenttrades = $exchange->recenttrades;
-   $price = $recenttrades[0]->price;
-
-   $ticker =
-   array(
-     "label" => $label ,
-     "currency" => $primary_name ,
-     "volume" => $volume ,
-     "lastrader" => $last_trader ,
-     "price" => $price);
-
-   $ticker = json_encode($ticker);
-
-
-   echo $ticker;
+  echo $ticker;
 
 ?>

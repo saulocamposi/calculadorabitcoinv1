@@ -48,19 +48,19 @@ var mbCtrl = function($scope, $http, $resource) {
   });
 */
 
-  $http.get("services/doge_cryptsy_services.php").then(function(response) {
+  $http.get("services/doge_polionex_services.php").then(function(response) {
     $scope.doge = response.data;
   });
 
-  $http.get("services/dash_cryptsy_services.php").then(function(response) {
+  $http.get("services/dash_polionex_services.php").then(function(response) {
     $scope.dash = response.data;
   });
 
-  $http.get("services/lite_cryptsy_services.php").then(function(response) {
+  $http.get("services/lite_polionex_services.php").then(function(response) {
     $scope.lite = response.data;
   });
 
-  $http.get("services/ether_cryptsy_services.php").then(function(response) {
+  $http.get("services/ether_polionex_services.php").then(function(response) {
     $scope.ether = response.data;
   });
 

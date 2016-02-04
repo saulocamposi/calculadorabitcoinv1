@@ -1,21 +1,18 @@
 <?php
-
    $service =  json_decode(file_get_contents("https://poloniex.com/public?command=returnTicker"));
 
    $exchange = $service->BTC_ETH;
 
-
-   $volume = $exchange->volume;
-   $label = $exchange->label;
-   $primary_name = $exchange->primaryname;
-   $last_trader = $exchange->lasttradetime;
-   $recenttrades = $exchange->recenttrades;
-   $price = $recenttrades[0]->price;
+   $volume = $exchange->baseVolume;
+   $currency = "ETHER";
+   $label = "BTC";
+   $last_trader = $exchange->last;
+   $price = $last_trader;
 
    $ticker =
    array(
-     "label" => $label,
-     "currency" => $primary_name ,
+     "label" => $label ,
+     "currency" => $currency ,
      "volume" => $volume ,
      "lastrader" => $last_trader ,
      "price" => $price);
