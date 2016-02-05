@@ -64,19 +64,11 @@ var mbCtrl = function($scope, $http, $resource) {
     $scope.ether = response.data;
   });
 
-  /*
-
-  API disabled per exceed limit of GETs
-
-  $http.get("services.php?brand=mtc").then(function(response) {
+  $http.get("services/services.php?brand=mtc").then(function(response) {
     $scope.mtc = response.data;
   });
 
-  */
-
 }
-
-
 
 app.controller("mbCtrl", ["$scope", "$http", mbCtrl]);
 app.config(routes);

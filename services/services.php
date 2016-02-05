@@ -12,21 +12,11 @@
     echo $bitvalor =  file_get_contents("https://api.flowbtc.com:8400/GetTicker/BTCBRL/");
   }
 
-/*
-
-  API disabled per exceed limit of GETs
-
   if($_GET['brand'] == "mtc"){
     echo $mtc =  file_get_contents("https://www.mercadobitcoin.net/api/ticker");
   }
 
-  */
-
   if($_GET['brand'] == "bitvalor"){
     echo $bitvalor =  json_decode(file_get_contents("http://api.bitvalor.com/v1/ticker.json"));
   }
-
-
-
-
 ?>
