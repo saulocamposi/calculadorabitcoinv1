@@ -19,6 +19,14 @@ margin-left: 2%;
   margin-left: 1%;
 }
 
+.card-index-right {
+  display: block-inline;
+  float: right;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-right: 19%;
+}
+
 .footer {
   clear: both;
   padding: 0 15px;

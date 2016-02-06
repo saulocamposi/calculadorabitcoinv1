@@ -22,6 +22,10 @@ var routes = function($routeProvider){
 
 var mbCtrl = function($scope, $http, $resource) {
 
+  $http.get("services/services.php?brand=mtc").then(function(response) {
+    $scope.mtc = response.data;
+  });
+
   $http.get("services/services.php?brand=btctoyou").then(function(response) {
     $scope.btctoyou = response.data;
   });
@@ -64,8 +68,12 @@ var mbCtrl = function($scope, $http, $resource) {
     $scope.ether = response.data;
   });
 
-  $http.get("services/services.php?brand=mtc").then(function(response) {
-    $scope.mtc = response.data;
+  $http.get("services/walletfoxbit_cold_services.php").then(function(response) {
+    $scope.wfoxcold = response.data;
+  });
+
+  $http.get("services/walletfoxbit_hot_services.php").then(function(response) {
+    $scope.wfoxhot = response.data;
   });
 
 }
