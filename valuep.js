@@ -2,21 +2,26 @@ var app = angular.module('calcbtc', ['ngMaterial','ngRoute']);
 
 var routes = function($routeProvider){
   $routeProvider
-         // route for the home page
+         // route for the bitcoincalculator page
          .when('/', {
              templateUrl : 'tpl/bitcoincalculator.html',
              controller  : 'mbCtrl'
          })
-         // route for the about page
+         // route for the satoshicalculator page
            .when('/satoshi', {
                templateUrl : 'tpl/satoshicalculator.html',
                controller  : 'mbCtrl'
            })
-           // route for the about page
+           // route for the bitcalculator page
              .when('/bit', {
                  templateUrl : 'tpl/bitcalculator.html',
                  controller  : 'mbCtrl'
              })
+             // route for the btc calc income page
+               .when('/income', {
+                   templateUrl : 'tpl/btc-calc-income.html',
+                   controller  : 'mbCtrl'
+               })
 }
 
 
