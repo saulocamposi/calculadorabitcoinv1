@@ -21,32 +21,32 @@
       </div>
 
       <div class="">
-        <input class="inputcalc" type="text" name="brlrefname" value="" ng-model="brlref" ng-required="number" placeholder="BTC Price">
+        <input class="inputcalc" type="text" name="brlrefname" value="" ng-model="brlref" ng-required="number" placeholder="BTC Preço">
         <input class="inputcalc" type="text" name="brlname" value="" ng-model="brl" ng-required="number" placeholder="Reais">
         <input class="inputcalc" type="text" name="btcname" value="" ng-model="bitcoin" required="number" placeholder="BTC">
       </div>
 
-</div>
+    </div>
 
 
-<div class="right-results">
-  <div class="results results-income">
-    <span class="labelPrice labelPrice-income"> BRL : </span>
-    <span class="price price-income"> {{ brlrefincome * bitcoinincome | number : 2}} </span>
-  </div>
+    <div class="right-results">
+      <div class="results results-income">
+        <span class="labelPrice labelPrice-income"> BRL : </span>
+        <span class="price price-income"> {{ brlrefincome * bitcoinincome | number : 2}} </span>
+      </div>
 
-  <div class="results results-income">
-    <span class="labelPrice labelPrice-income ">BTC :</span>
-    <span class="price price-income"> {{ brlincome / brlrefincome | number : 8 }} </span>
-  </div>
+      <div class="results results-income">
+        <span class="labelPrice labelPrice-income ">BTC :</span>
+        <span class="price price-income"> {{ brlincome / brlrefincome | number : 8 }} </span>
+      </div>
 
-  <div class="">
-    <input class="inputcalc" type="text" name="brlrefname" value="" ng-model="brlrefincome" ng-required="number" placeholder="BTC Pre">
-    <input class="inputcalc" type="text" name="brlname" value="" ng-model="brlincome" ng-required="number" placeholder="Reais">
-    <input class="inputcalc" type="text" name="btcname" value="" ng-model="bitcoinincome" required="number" placeholder="BTC">
-  </div>
+      <div class="">
+        <input class="inputcalc" type="text" name="brlrefname" value="" ng-model="brlrefincome" ng-required="number" placeholder="BTC Preço">
+        <input class="inputcalc" type="text" name="brlname" value="" ng-model="brlincome" ng-required="number" placeholder="Reais">
+        <input class="inputcalc" type="text" name="btcname" value="" ng-model="bitcoinincome" required="number" placeholder="BTC">
+      </div>
 
-</div>
+    </div>
 
 
 
