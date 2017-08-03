@@ -1,5 +1,6 @@
-var app = angular.module('calcbtc', ['ngMaterial','ngRoute']);
+var app = angular.module('calcbtc', ['ngRoute']);
 
+/*
 var routes = function($routeProvider){
   $routeProvider
          // route for the bitcoincalculator page
@@ -23,6 +24,7 @@ var routes = function($routeProvider){
                    controller  : 'mbCtrl'
                })
 }
+*/
 
 var mbCtrl = function($scope, $http, $resource) {
 
@@ -80,7 +82,11 @@ var mbCtrl = function($scope, $http, $resource) {
     $scope.wfoxhot = response.data;
   });
 
+  $scope.viewCalculator = function(value) {
+    $scope.viewCalc = value;
+  }
+
 }
 
 app.controller("mbCtrl", ["$scope", "$http", mbCtrl]);
-app.config(routes);
+//app.config(routes);
