@@ -1,13 +1,22 @@
+.card-content{
+  position: relative;
+}
+
 .card{
-  border-radius: 3px;
+  border-radius: 5px;
   background: #FFFFFF;
-  margin-top: 1%;
-  margin-bottom: 3%;
+  box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+}
+
+.card-item{
+  float: left;
+  margin: 0 1.5% 10px;
+  overflow: auto;
+  width: 45%;
 }
 
 .title-card{
   background: #673AB7;
-  height: 35px;
 }
 
 .title-card span{
