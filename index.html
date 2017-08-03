@@ -12,27 +12,26 @@
 </head>
 
 <body ng-controller="mbCtrl">
+  <div class="header">
+    <span class="title-logo">Calculadora Bitcoin</span>
+  </div>
+
+
 
   <div id="pagewrap">
 
-    <div class="header">
-      <span class="title-logo">Calculadora Bitcoin</span>
-    </div>
 
-    <div class="card-index">
+
+    <div class="card-content wrapper">
+      <!-- XXX:
+      <ng-view></ngview>
+      -->
+
+
       <ng-include src="'tpl/card-exchanges.html'"></ng-include>
       <ng-include src="'tpl/card-bitvalor.html'"></ng-include>
       <ng-include src="'tpl/card-polionex.html'"></ng-include>
-    </div>
-
-
-    <div>
-      <div ng-view>
-      </div>
-      <div class="card-index-right">
-        <ng-include src="'tpl/card-foxbitwallet.html'"></ng-include>
-      </div>
-
+      <ng-include src="'tpl/card-foxbitwallet.html'"></ng-include>
     </div>
 
     <div class="footer">
