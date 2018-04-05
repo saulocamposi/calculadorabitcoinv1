@@ -9,10 +9,9 @@ html {
 }
 
 .wrapper{
-  margin: 25px auto;
-  width: 1100px;
+  margin: 2%;
+  width: 80%;
 }
-
 
 .title-logo{
   font-size: 2em;
@@ -20,32 +19,7 @@ html {
   margin-left: 2%;
 }
 
-.card-index {
-  display: block-inline;
-  float: left;
-  margin-bottom: 1%;
-  margin-left: 1%;
-}
-
-.card-index-right {
-  display: block-inline;
-  float: right;
-  margin-top: 1%;
-  margin-bottom: 1%;
-  margin-right: 22.5%;
-}
-
 .footer {
   clear: both;
   padding: 0 15px;
-}
-
-
-/* to verify - orphan class*/
-.priceRef {
-  display: block;
-}
-
-.exchanges{
-  width: 40%;
 }
