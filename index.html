@@ -5,23 +5,20 @@
   <meta charset="utf-8">
   <title>Calculadora Bitcoin</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" type="text/css" href="css/main.css">
-  <link rel="stylesheet" type="text/css" href="css/main_calculator.css">
-  <link rel="stylesheet" type="text/css" href="css/card.css">
-  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+  <link rel="stylesheet" type="text/css" href="css/fields_calculator.css?version=v1">
+  <link rel="stylesheet" type="text/css" href="css/main.css?version=v1">
+  <link rel="stylesheet" type="text/css" href="css/main_calculator.css?version=v1">
+  <link rel="stylesheet" type="text/css" href="css/card.css?version=v1">
 </head>
 
 <body ng-controller="mbCtrl">
-  <div class="header">
+  <nav class="header">
     <span class="title-logo">Calculadora Bitcoin</span>
-  </div>
+  </nav>
 
 
 
   <div id="pagewrap">
-
-
-
     <div class="card-content wrapper">
       <ng-include src="'tpl/calc/main-calculator.html'"></ng-include>
       <ng-include src="'tpl/card-exchanges.html'"></ng-include>
@@ -40,23 +37,6 @@
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
-
-
-    <script src="./bower_components/angular/angular.js" type="text/javascript"></script>
-    <script src="./bower_components/angular-animate/angular-animate.js" type="text/javascript"></script>
-    <script src="./bower_components/angular-aria/angular-aria.js" type="text/javascript"></script>
-    <script src="./bower_components/angular-messages/angular-messages.min.js"></script>
-
-    <script src="./bower_components/angular-material/angular-material.js" type="text/javascript"></script>
-
-<!-- XXX:
-
-  <script src="./bower_components/angular/angular-route.js" type="text/javascript"></script>
-
- -->
-
-
-
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="valuep.js"></script>
     <script>
@@ -75,6 +55,27 @@
       ga('create', 'UA-71521810-1', 'auto');
       ga('send', 'pageview');
     </script>
+
+
+<script type="text/javascript">
+
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+
+</script>
+
+
 </body>
 
 </html>
