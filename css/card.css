@@ -10,7 +10,7 @@
 
 .card-item{
   float: left;
-  margin: 0 1.5% 10px;
+  margin: 0 1.5% 2%;
   overflow: auto;
   width: 45%;
 }
@@ -38,4 +38,19 @@
   position: absolute;
   bottom: 0;
   left: 0;
+}
+
+.card-index {
+  display: block-inline;
+  float: left;
+  margin-bottom: 1%;
+  margin-left: 1%;
+}
+
+.card-index-right {
+  display: block-inline;
+  float: right;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-right: 22.5%;
 }
