@@ -1,12 +1,13 @@
-<div class="mainCalculator">
-  <div class="title-card-calculator">
-    <div class="title-card-calculator-text">
-      <a href="#/">Calculadora Bitcoin</a>
-      <a href="#satoshi">Calculadora Satoshi</a>
-      <a href="#bit">Calculadora Bits</a>
-      <a href="#income">Lucro Trade</a>
+<div class="card card-item">
+
+    <div class="title-card">
+      <span><a href="#/">Calculadora Bitcoin</a></span>
+      <!-- XXX:  <span><a href="#satoshi">Calculadora Satoshi</a></span>
+      <span><a href="#bit">Calculadora Bits</a></span>
+      <span><a href="#income">Lucro Trade</a></span>-->
+
     </div>
-  </div>
+
   <div class="mainresults">
 
     <div class="left-results">
@@ -25,21 +26,16 @@
         <input class="inputcalc" type="text" name="brlname" value="" ng-model="brl" ng-required="number" placeholder="Reais">
         <input class="inputcalc" type="text" name="btcname" value="" ng-model="bitcoin" required="number" placeholder="BTC">
       </div>
-
     </div>
-
-
     <div class="right-results">
       <div class="results results-income">
         <span class="labelPrice labelPrice-income"> BRL : </span>
         <span class="price price-income"> {{ brlrefincome * bitcoinincome | number : 2}} </span>
       </div>
-
       <div class="results results-income">
         <span class="labelPrice labelPrice-income ">BTC :</span>
         <span class="price price-income"> {{ brlincome / brlrefincome | number : 8 }} </span>
       </div>
-
       <div class="">
         <input class="inputcalc" type="text" name="brlrefname" value="" ng-model="brlrefincome" ng-required="number" placeholder="BTC Preço">
         <input class="inputcalc" type="text" name="brlname" value="" ng-model="brlincome" ng-required="number" placeholder="Reais">
@@ -47,12 +43,5 @@
       </div>
 
     </div>
-
-
-
-
-
-
-
   </div>
 </div>
