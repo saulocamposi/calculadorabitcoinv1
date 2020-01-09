@@ -3,6 +3,7 @@
     <Header/>
     <BitValor></BitValor>
     <Exchanges/>
+    <Poloniex/>
     <Footer/>
   </div>
 </template>
@@ -12,6 +13,8 @@ import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
 import BitValor from './components/BitValor.vue'
 import Exchanges from './components/Exchanges.vue'
+import Poloniex from './components/Poloniex.vue'
+import './assets/styles/index.css'
 
 export default {
   name: 'app',
@@ -19,7 +22,8 @@ export default {
     Header,
     Footer,
     BitValor,
-    Exchanges
+    Exchanges,
+    Poloniex
   }
 }
 </script>

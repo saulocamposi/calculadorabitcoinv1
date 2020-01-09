@@ -10,10 +10,7 @@
       <th>
         Moeda
       </th>
-      <!-- XXX:
-      <th>
-        Conversão
-      </th>-->
+    
       <th>
         Volume
       </th>
@@ -24,91 +21,38 @@
         Preço
       </th>
     </tr>
-    <tr>
-      <td>
-        {{lite.currency}}
-      </td>
-      <!-- XXX:  <td>
-        {{lite.label}}
-      </td>-->
-
-      <td>
-        {{lite.volume}}
-      </td>
-      <td>
-        {{lite.lastrader}}
-      </td>
-      <td>
-        {{lite.price}}
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{doge.currency}}
-      </td>
-      <!-- XXX:  <td>
-        {{doge.label}}
-      </td>-->
-
-      <td>
-        {{doge.volume}}
-      </td>
-      <td>
-        {{doge.lastrader}}
-      </td>
-      <td>
-        {{doge.price}}
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{ether.currency}}
-      </td>
-      <!-- XXX:  <td>
-        {{ether.label}}
-      </td>-->
-      <td>
-        {{ether.volume}}
-      </td>
-      <td>
-        {{ether.lastrader}}
-      </td>
-      <td>
-        {{ether.price}}
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{dash.currency}}
-      </td>
-      <!-- XXX:  <td>
-        {{dash.label}}
-      </td>-->
-
-      <td>
-        {{dash.volume}}
-      </td>
-      <td>
-        {{dash.lastrader}}
-      </td>
-      <td>
-        {{dash.price}}
-      </td>
-    </tr>
+    
+    {{tickers}}
+    
   </table>
 </div>
 
 </template>
 
 <script>
+import axios from 'axios';
 export default {
   name: 'Poloniex',
   props: {
     msg: String
+  },
+  data(){
+    return {
+      tickers:[this.getTickers()]
+      }
+
+  },
+  methods:{
+    getTickers() {
+    axios.get("https://poloniex.com/public?command=returnTicker")
+    .then(res => this.tickers = res.data)
+    .catch(err => err);  
+    }
+    
   }
 }
-</script>
 
+</script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .card-content{

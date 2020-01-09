@@ -1,16 +1,12 @@
 <template>
-<div class="footer">
-<p>Esta página é desenvolvida por Saulo Campos</p>
-<p> Repositório : 
- <a href="https://github.com/saulocamposi/calculadorabitcoin">
- Repository
- </a>  
-</p>
-</div>
-
-
-
-
+  <div class="bg-blue footer">
+  <p>Esta página é desenvolvida por Saulo Campos</p>
+  <p> Repositório : 
+  <a href="https://github.com/saulocamposi/calculadorabitcoin">
+  Repository
+  </a>  
+  </p>
+  </div>
 </template>
 
 <script>
