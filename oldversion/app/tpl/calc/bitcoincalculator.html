@@ -1,0 +1,20 @@
+<div class="card card-item">
+
+    <div class="title-card">
+      <span><a href="#/">Calculadora Bitcoin</a></span>
+      <!-- XXX:  <span><a href="#satoshi">Calculadora Satoshi</a></span>
+      <span><a href="#bit">Calculadora Bits</a></span>
+      <span><a href="#income">Lucro Trade</a></span>-->
+
+    </div>
+<div class="container-calc">
+
+      <span class="labelPrice"> BRL : {{ brlref * bitcoin | number : 2}}</span>
+      <span class="labelPrice">Bitcoin : {{ brl / brlref | number : 8 }}</span>
+    
+    <input class="inputcalc" type="text" name="brlname" value="" ng-model="brl" ng-required="number" placeholder="Valor em Reais">
+    <input class="inputcalc" type="text" name="btcname" value="" ng-model="bitcoin" required="number" placeholder="Valor em Bitcoins">
+
+</div>
+
+</div>

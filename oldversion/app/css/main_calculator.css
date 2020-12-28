@@ -1,0 +1,23 @@
+.title-card-calculator {
+  background: #9575CD;
+  height: 35px;
+}
+.title-card-calculator span {
+  color: #FFFFFF;
+  font-size: 0.9em;
+  margin-top: 5%;
+  margin-left: 2%;
+}
+.title-card-calculator div a {
+  color: #FFFFFF;
+  font-size: 1em;
+  margin-top: 5%;
+  margin-left: 1%;
+  text-decoration: none;
+}
+.title-card-calculator-text {
+  position: relative;
+  top: 50%;
+  left: 0;
+  vertical-align: bottom;
+}
