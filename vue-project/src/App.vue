@@ -14,7 +14,6 @@ import Footer from './components/Footer.vue'
 import BitValor from './components/BitValor.vue'
 import Exchanges from './components/Exchanges.vue'
 import Poloniex from './components/Poloniex.vue'
-import './assets/styles/index.css'
 
 export default {
   name: 'app',
