@@ -1,32 +1,24 @@
 <template>
 
-<div id="div1" class="card card-item" ondrop="drop(event)" ondragover="allowDrop(event)">
-  <div class="title-card">
-    <span>Poloniex</span>
-  </div>
-
-  <table class="">
-    <tr>
-      <th>
-        Moeda
-      </th>
-    
-      <th>
-        Volume
-      </th>
-      <th>
-        LastTrade
-      </th>
-      <th>
-        Preço
-      </th>
-    </tr>
-    
-    {{tickers}}
-    
+<div id="div1" class="card card-item">
+    <div class="title-card">
+      <span>Poloniex</span>
+    </div>
+    <table class="">
+      <tr>
+        <th>Moeda</th>
+        <th>Volume</th>
+        <th>LastTrade</th>
+        <th>Preço</th>
+      </tr>    
+      <tr v-for="(ticker, currency) in tickers" :key="currency">
+        <td>{{ currency }}</td>
+        <td>{{ ticker.baseVolume }}</td>
+        <td>{{ ticker.last }}</td>
+        <td>{{ ticker.lowestAsk }}</td>
+      </tr>    
   </table>
 </div>
-
 </template>
 
 <script>
@@ -36,22 +28,22 @@ export default {
   props: {
     msg: String
   },
-  data(){
+  data() {
     return {
-      tickers:[this.getTickers()]
-      }
-
-  },
-  methods:{
-    getTickers() {
-    axios.get("https://poloniex.com/public?command=returnTicker")
-    .then(res => this.tickers = res.data)
-    .catch(err => err);  
+      tickers: {}
     }
-    
+  },
+  created() {
+    this.getTickers();
+  },
+  methods: {
+    getTickers() {
+      axios.get("https://api.poloniex.com/markets/price")
+        .then(res => this.tickers = res.data)
+        .catch(err => console.error(err));
+    }
   }
 }
-
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
